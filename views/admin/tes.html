@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <%- include('../layout/adminheader') -%>
+
+    <h2 class="page-title">Add a Page</h2>
+    <a href="admin/pages" class="btn btn-primary">Back to all pages</a>
+    <br/> <br/>
+
+    <form method="post" action="/admin/add-page">
+        <div class="form-group">
+            <label>title</label>
+            <input type="text" name="title" class="form-control" value="<%= title %>" placeholder="Title">
+        </div>
+        <div class="form-group">
+            <label>Link</label>
+            <input type="text" name="link" class="form-control" value="<%= link %>" placeholder="Link">
+        </div>
+        <div class="form-group">
+            <label>Context</label>
+            <textarea name="content" class="from-control" id="ta" cols="30" rows="10" placeholder="Content"><%= Content %></textarea>
+        </div>
+
+        <button class="btn btn-default">kirim</button>
+    
+    </form>
+
+    <%- include('../layout/adminfooter') -%>
+
+</body>
+</html>
